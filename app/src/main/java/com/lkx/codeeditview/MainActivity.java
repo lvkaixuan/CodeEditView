@@ -27,12 +27,12 @@ public class MainActivity extends AppCompatActivity {
         final TextView textView = (TextView) findViewById(R.id.textview);
         codeEditView.setOnInputEndCallBack(new CodeEditView.inputEndListener() {
             @Override
-            public void input(String text) {
+            public void input(String text) { //输入完毕后的回调
                 Toast.makeText(MainActivity.this, text, Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void afterTextChanged(String text) {
+            public void afterTextChanged(String text) { //输入内容改变后的回调
                 textView.setText(text);
             }
         });
