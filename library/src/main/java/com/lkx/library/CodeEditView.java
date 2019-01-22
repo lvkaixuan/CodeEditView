@@ -23,7 +23,7 @@ import java.util.ArrayList;
 /**
  * 作者: LKX
  * 时间: 2018/9/3
- * 描述: 验证码输入框
+ * 描述: 验证码输入框  https://github.com/lvkaixuan
  */
 
 public class CodeEditView extends LinearLayout implements TextWatcher, View.OnClickListener {
@@ -131,6 +131,14 @@ public class CodeEditView extends LinearLayout implements TextWatcher, View.OnCl
         mEditText.addTextChangedListener(this);
         mEditText.setTextSize(0);
         addView(mEditText);
+    }
+
+    //清空文字
+    public void clearText(){
+        mEditText.setText("");
+        for (TextView textView : mTextViewsList) {
+            textView.setText("");
+        }
     }
 
     @Override

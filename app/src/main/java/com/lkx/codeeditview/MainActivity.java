@@ -11,6 +11,8 @@ import com.lkx.library.CodeEditView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private CodeEditView mCodeEditView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,9 +25,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init() {
-        CodeEditView codeEditView = (CodeEditView) findViewById(R.id.codeEditView);
+        mCodeEditView = (CodeEditView) findViewById(R.id.codeEditView);
         final TextView textView = (TextView) findViewById(R.id.textview);
-        codeEditView.setOnInputEndCallBack(new CodeEditView.inputEndListener() {
+        mCodeEditView.setOnInputEndCallBack(new CodeEditView.inputEndListener() {
             @Override
             public void input(String text) { //输入完毕后的回调
                 Toast.makeText(MainActivity.this, text, Toast.LENGTH_SHORT).show();
@@ -36,5 +38,10 @@ public class MainActivity extends AppCompatActivity {
                 textView.setText(text);
             }
         });
+    }
+
+    //清除文字
+    public void clear(View view) {
+        mCodeEditView.clearText();
     }
 }
