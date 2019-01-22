@@ -17,7 +17,7 @@ allprojects {
 
 ```
 dependencies {
-	implementation 'com.github.lvkaixuan:CodeEditView:v1.0.1'
+	implementation 'com.github.lvkaixuan:CodeEditView:1.0.2'
 }
 ```
 布局中使用控件
