@@ -42,8 +42,8 @@ dependencies {
       }
  });
  
- //清除输入框内容 (v1.0.2新增方法)
- codeEditView.clearText();
+   //清除输入框内容 (v1.0.2新增方法)
+   codeEditView.clearText();
 ```
 
 ### Demo地址
