@@ -6,9 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.lkx.library.CodeEditView;
 
+/**
+ * 作者: LKX
+ * 时间: 2018/9/3
+ * 描述: 验证码输入框  https://github.com/lvkaixuan
+ */
 public class MainActivity extends AppCompatActivity {
 
     private CodeEditView mCodeEditView;

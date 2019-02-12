@@ -4,11 +4,17 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:background="#ffffff"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent">
-
+    <TextView
+        android:layout_marginTop="50dp"
+        android:padding="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="默认输入框"/>
     <com.lkx.library.CodeEditView
         android:id="@+id/codeEditView"
-        android:layout_marginTop="100dp"
         android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
@@ -24,4 +30,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="清空文字"/>
+    <View
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/colorAccent"/>
+    <TextView
+        android:padding="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自定义输入框"/>
+    <com.lkx.library.CodeEditView
+        android:id="@+id/codeEditView1"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        app:textColor="@color/colorAccent"
+        app:borderNum="4"
+        app:borderMargin="20"
+        app:borderSize="48"
+        app:textSize="10"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:padding="10dp"
+        android:id="@+id/textview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\n\t
+        app:textColor=@color/colorAccent //字体颜色\n\t
+        app:borderNum=4 //输入框个数\n\t
+        app:borderMargin=20 //输入框间距\n\t
+        app:borderSize=48 //输入框大小\n\t
+        app:textSize=10 //字体大小"
+        android:layout_gravity="center_horizontal"/>
+
 </LinearLayout>
