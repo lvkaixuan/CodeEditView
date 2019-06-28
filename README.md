@@ -1,4 +1,12 @@
 # CodeEditView
+### 通知
+近期有用户反馈在Android9.0的手机上无法输入的问题,原因是因为项目中的targetSdkVersion版本设置过高,目前已知(targetSdkVersion 28)会出现该问题,目前已修复,新版本: 
+
+```
+dependencies {
+	implementation 'com.github.lvkaixuan:CodeEditView:v1.0.5'
+}
+```
 ### 效果图
 <img src="https://github.com/lvkaixuan/CodeEditView/blob/master/04BB29B5-929C-474F-BDCB-0147F475FB94.png" width="60%">
 
@@ -17,7 +25,7 @@ allprojects {
 
 ```
 dependencies {
-	implementation 'com.github.lvkaixuan:CodeEditView:v1.0.3'
+	implementation 'com.github.lvkaixuan:CodeEditView:v1.0.5'
 }
 ```
 布局中使用控件
