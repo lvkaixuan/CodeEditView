@@ -200,6 +200,7 @@ public class CodeEditView extends LinearLayout implements TextWatcher, View.OnCl
         mEditText.addTextChangedListener(this);
         mEditText.setTextSize(0);
         mEditText.setHeight(1);
+        mEditText.setWidth(1);
         addView(mEditText);
     }
 
