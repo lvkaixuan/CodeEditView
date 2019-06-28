@@ -17,7 +17,7 @@ allprojects {
 
 ```
 dependencies {
-	implementation 'com.github.lvkaixuan:CodeEditView:1.0.2'
+	implementation 'com.github.lvkaixuan:CodeEditView:v1.0.3'
 }
 ```
 布局中使用控件
@@ -44,11 +44,31 @@ dependencies {
  
    //清除输入框内容 (v1.0.2新增方法)
    codeEditView.clearText();
+   //新增长按粘贴 (v1.0.3新增)
+```
+### 高级使用(自定义)
+```
+<com.lkx.library.CodeEditView
+  android:id="@+id/codeEditView1"
+  android:gravity="center_horizontal"
+  android:layout_width="match_parent"
+  app:textColor="@color/colorAccent"
+  app:borderNum="4"
+  app:borderMargin="20"
+  app:borderSize="48"
+  app:textSize="10"
+  android:layout_height="wrap_content"/>
+```
+```
+app:textColor=@color/colorAccent //字体颜色
+app:borderNum=4 //输入框个数
+app:borderMargin=20 //输入框间距
+app:borderSize=48 //输入框大小
+app:textSize=10 //字体大小"
 ```
 
 ### Demo地址
 
- - GitHub地址: https://github.com/lvkaixuan/CodeEditView
  - CSDN博客地址: https://blog.csdn.net/lvkaixuan/article/details/82455366
  - 扫码下载apk
 ![这里写图片描述](https://github.com/lvkaixuan/CodeEditView/blob/master/scan.png)
