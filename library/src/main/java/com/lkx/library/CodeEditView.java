@@ -100,7 +100,6 @@ public class CodeEditView extends LinearLayout implements TextWatcher, View.OnCl
             public void onClick(View v) {
                 popupWindow.dismiss();
                 pasteTextToView();
-//                Toast.makeText(mContext, getPasetText(), Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -169,9 +168,11 @@ public class CodeEditView extends LinearLayout implements TextWatcher, View.OnCl
         new android.os.Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+                mEditText.setFocusable(true);
+                mEditText.setFocusableInTouchMode(true);
+                mEditText.requestFocus();
                 InputMethodManager imm = (InputMethodManager) mContext.getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
-                mEditText.setHintTextColor(Color.parseColor("#ff0000"));
             }
         }, 500);
 
@@ -194,10 +195,11 @@ public class CodeEditView extends LinearLayout implements TextWatcher, View.OnCl
         mEditText = new EditText(context);
         mEditText.setBackgroundColor(Color.parseColor("#00000000"));
         mEditText.setMaxLines(1);
-        mEditText.setInputType(EditorInfo.TYPE_CLASS_NUMBER);
+        mEditText.setInputType(inputType);
         mEditText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(editViewNum)});
         mEditText.addTextChangedListener(this);
         mEditText.setTextSize(0);
+        mEditText.setHeight(1);
         addView(mEditText);
     }
 
